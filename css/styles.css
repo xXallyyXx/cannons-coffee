@@ -27,6 +27,10 @@ nav ul {
   align-items: flex-end;
 }
 
+#burger-button {
+  display: none;
+}
+
 a {
   text-decoration: none;
   color: var(--white);
@@ -216,5 +220,32 @@ footer {
   }
   header {
     justify-content: space-between;
+  }
+}
+/* Outside of the media query we are going to hide the burger button. We only want it to show on a mobile sized screen */
+/* find your break point to show your hamburger button by opening dev tools to see the pixels of the screen. */
+@media (max-width: 535px) {
+  #burger-button {
+    display: block;
+    margin: 1rem auto;
+
+    /* this only keeps the lines of the button and it hangs off the left
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px; */
+
+    /* these center, but the lines fall off the block and it hangs off the right */
+    /* width: 30px;
+    height: 20px;
+    position: relative;
+    cursor: pointer; */
+  }
+  nav ul {
+    display: none;
+  }
+
+  .visible {
+    display: block;
   }
 }
